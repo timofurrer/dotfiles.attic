@@ -168,7 +168,7 @@ bindsym $mod+F2 exec --no-startup-id "~/.i3/monitor.d/two"
 bindsym $mod+F3 exec --no-startup-id "~/.i3/monitor.d/three"
 
 # Set background image
-#exec --no-startup-id feh --randomize --bg-fill ~/.i3/backgrounds/*
+exec_always --no-startup-id feh --randomize --bg-fill ~/.backgrounds
 
 # bind multimedia function keys
 # bind volume control function keys
@@ -187,18 +187,11 @@ bindsym XF86LaunchA scratchpad show
 #bindsym Print exec scrot -s '%Y-%m-%d--%s_$w$h_scrot.png' -e 'mv $f ~/images &amp; viewnior ~/images/$f'
 bindsym --release Print exec --no-startup-id "scrot -d -e 'mv $f ~/images &amp; viewnior ~/images/$f'"
 
-# set background
-exec feh --randomize --bg-scale ~/.i3/backgrounds/*
-#exec xsetroot -solid '#101010'
-#exec "feh --bg-scale ~/.i3/backgrounds/ubuntu03.jpg"
-#exec "feh --bg-scale ~/.i3/backgrounds/tux_yinyan.png"
-#exec "feh --bg-scale ~/.i3/backgrounds/science_001.jpg"
-
 # bind for lockscreen
-bindsym $mod+Shift+x exec "i3lock --dpms -i ~/.i3/backgrounds/marching_pinguin_scaled.png"
+bindsym $mod+Shift+x exec "i3lock --dpms -i ~/.backgrounds/minimal_earth.jpg"
 
 # lock screen after 10 minutes
-exec xautolock -time 10 -locker "i3lock --dpms -i ~/.i3/backgrounds/marching_pinguin_scaled.png"
+exec xautolock -time 10 -locker "i3lock --dpms -i ~/.backgrounds/minimal_earth.jpg"
 
 # start network manager applet
 exec --no-startup-id nm-applet
@@ -219,16 +212,16 @@ bindsym $mod+minus scratchpad show
 #client.urgent #CE4045 #CE4045 #FFFFFF #DCCD69
 
 # i3-gaps
-#smart_gaps on
-#gaps inner 15
-#gaps outer 0
+smart_gaps on
+gaps inner 15
+gaps outer 0
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 #new_window pixel 1
 #new_float pixel 1
 
 # Hide borders
-#hide_edge_borders none
+hide_edge_borders none
 
 #exec ~/.i3/autostart
-#exec_always --no-startup-id $HOME/.i3/bin/run_polybar.sh
+exec_always --no-startup-id $HOME/.polybar/run.sh
