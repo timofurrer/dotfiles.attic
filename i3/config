@@ -29,11 +29,16 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+d exec --no-startup-id rofi -lines 10 -show run
+
+# Support switching of windows using alt-tab
+bindsym $mod+Tab exec rofi -lines 20 -show window
+
+# Start ranger a ncurses file explorer
+bindsym $mod+g exec --no-startup-id i3-sensible-terminal -x ranger
+
+# Support of pass
+bindsym $mod+p exec $HOME/.config/rofi/pass.sh
 
 # change focus
 #bindsym $mod+h focus left
@@ -163,9 +168,9 @@ bindsym $mod+Ctrl+Right move workspace to output right
 bindsym $mod+x exec i3lock -c 15dc00 --dpms
 
 # Configure monitors
-bindsym $mod+F1 exec --no-startup-id "~/.i3/monitor.d/single"
-bindsym $mod+F2 exec --no-startup-id "~/.i3/monitor.d/two"
-bindsym $mod+F3 exec --no-startup-id "~/.i3/monitor.d/three"
+bindsym $mod+F1 exec --no-startup-id "~/.config/i3/monitor.d/single"
+bindsym $mod+F2 exec --no-startup-id "~/.config/i3/monitor.d/two"
+bindsym $mod+F3 exec --no-startup-id "~/.config/i3/monitor.d/three"
 
 # Set background image
 exec_always --no-startup-id feh --randomize --bg-fill ~/.backgrounds
@@ -188,10 +193,10 @@ bindsym XF86LaunchA scratchpad show
 bindsym --release Print exec --no-startup-id "scrot -d -e 'mv $f ~/images &amp; viewnior ~/images/$f'"
 
 # bind for lockscreen
-bindsym $mod+Shift+x exec "i3lock --dpms -i ~/.backgrounds/minimal_earth.jpg"
+bindsym $mod+Shift+x exec "i3lock --dpms -i ~/.config/backgrounds/minimal_earth.jpg"
 
 # lock screen after 10 minutes
-exec xautolock -time 10 -locker "i3lock --dpms -i ~/.backgrounds/minimal_earth.jpg"
+exec xautolock -time 10 -locker "i3lock --dpms -i ~/.config/backgrounds/minimal_earth.jpg"
 
 # start network manager applet
 exec --no-startup-id nm-applet
@@ -224,4 +229,4 @@ gaps outer 0
 hide_edge_borders none
 
 #exec ~/.i3/autostart
-exec_always --no-startup-id $HOME/.polybar/run.sh
+exec_always --no-startup-id $HOME/.config/polybar/run.sh
