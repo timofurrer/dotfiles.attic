@@ -19,8 +19,8 @@ sudo apt install rofi ranger
 **(2) Build and install polybar:**
 
 ```
-git clone --recursive https://github.com/jaagr/polybar
-cd polybar
+git clone --recursive https://github.com/jaagr/polybar polybar.bin
+cd polybar.bin
 ./build.sh
 ```
 
