@@ -173,7 +173,7 @@ bindsym $mod+F2 exec --no-startup-id "~/.config/i3/monitor.d/two"
 bindsym $mod+F3 exec --no-startup-id "~/.config/i3/monitor.d/three"
 
 # Set background image
-exec_always --no-startup-id feh --randomize --bg-fill ~/.backgrounds
+exec_always --no-startup-id feh --randomize --bg-fill ~/.config/backgrounds
 
 # bind multimedia function keys
 # bind volume control function keys
