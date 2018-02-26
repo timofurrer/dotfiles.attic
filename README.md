@@ -49,4 +49,6 @@ ln -s ~/dotfiles/i3 ~/.config/i3
 ln -s ~/dotfiles/polybar ~/.config/polybar
 ln -s ~/dotfiles/backgrounds ~/.config/backgrounds
 ln -s ~/dotfiles/rofi ~/.config/rofi
+ln -s ~/dotfiles/vim ~/.vim
+ln -s ~/.vim/vimrc ~/.vimrc
 ```
