@@ -30,6 +30,7 @@ plugins=(
     git-extras
 
     python
+    pyenv
 
     docker
     jsontools  # pp_json, is_json, urlencode_json, urldecode_json
