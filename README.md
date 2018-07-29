@@ -50,5 +50,6 @@ ln -s ~/dotfiles/polybar ~/.config/polybar
 ln -s ~/dotfiles/backgrounds ~/.config/backgrounds
 ln -s ~/dotfiles/rofi ~/.config/rofi
 ln -s ~/dotfiles/vim ~/.vim
+ln -s ~/dotfiles/git/gitconfig ~/.gitconfig
 ln -s ~/.vim/vimrc ~/.vimrc
 ```

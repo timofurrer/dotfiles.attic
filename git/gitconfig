@@ -1,0 +1,20 @@
+[user]
+        name = Timo Furrer
+        email = tuxtimo@gmail.com
+	signingkey = D3304F22
+
+[push]
+	default = simple
+
+[commit]
+	gpgsign = true
+
+[github]
+	user = timofurrer
+
+[alias]
+	st = status
+	co = checkout
+	br = branch
+	ci = commit
+        ablame = shortlog -s -n
