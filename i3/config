@@ -217,9 +217,9 @@ bindsym $mod+minus scratchpad show
 #client.urgent #CE4045 #CE4045 #FFFFFF #DCCD69
 
 # i3-gaps
-smart_gaps on
-gaps inner 15
-gaps outer 0
+#smart_gaps on
+#gaps inner 15
+#gaps outer 0
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 #new_window pixel 1
