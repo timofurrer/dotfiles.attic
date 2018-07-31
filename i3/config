@@ -90,6 +90,18 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+# define which workspace should be on which monitor
+workspace 1 output DP1-2
+workspace 2 output DP1-2
+workspace 3 output DP1-2
+workspace 4 output DP1-2
+workspace 5 output DP1-2
+workspace 6 output DP1-1
+workspace 7 output DP1-1
+workspace 8 output DP1-1
+workspace 9 output DP1-1
+workspace 10 output DP2
+
 # switch to workspace
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
@@ -173,7 +185,7 @@ bindsym $mod+F2 exec --no-startup-id "~/.config/i3/monitor.d/two"
 bindsym $mod+F3 exec --no-startup-id "~/.config/i3/monitor.d/three"
 
 # Set background image
-exec_always --no-startup-id feh --randomize --bg-fill ~/.config/backgrounds
+exec_always --no-startup-id feh --bg-fill ~/.config/backgrounds/flying_turle.png
 
 # bind multimedia function keys
 # bind volume control function keys
@@ -193,10 +205,8 @@ bindsym XF86LaunchA scratchpad show
 bindsym --release Print exec --no-startup-id "scrot -d -e 'mv $f ~/images &amp; viewnior ~/images/$f'"
 
 # bind for lockscreen
-bindsym $mod+Shift+x exec "i3lock --dpms -i ~/.config/backgrounds/minimal_earth.jpg"
-
-# lock screen after 10 minutes
-exec xautolock -time 10 -locker "i3lock --dpms -i ~/.config/backgrounds/minimal_earth.jpg"
+bindsym $mod+Shift+x exec "i3lock --beep -i ~/.config/old.i3/lock/windows_blue_screen.png -t -p win"
+exec --no-startup-id xautolock -time 15 -locker "i3lock --beep -i ~/.config/old.i3/lock/windows_blue_screen.png -t -    p win" &
 
 # start network manager applet
 exec --no-startup-id nm-applet
