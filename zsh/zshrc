@@ -57,6 +57,22 @@ SPACESHIP_DIR_COLOR=035
 
 SPACESHIP_EXIT_CODE_SHOW=true
 
+SPACESHIP_PROMPT_ORDER=(
+  time          # Time stampts section
+  dir           # Current directory section
+  git           # Git section (git_branch + git_status)
+  rust          # Rust section
+  docker        # Docker section
+  venv          # virtualenv section
+  pyenv         # Pyenv section
+  exec_time     # Execution time
+  battery       # Battery level and status
+  vi_mode       # Vi-mode indicator
+  jobs          # Background jobs indicator
+  exit_code     # Exit code section
+  char          # Prompt character
+)
+
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh_aliases
 
