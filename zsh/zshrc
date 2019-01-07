@@ -15,7 +15,6 @@ CASE_SENSITIVE="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     # essentials
-    common-aliases
     command-not-found
 
     # look & feel
@@ -94,3 +93,8 @@ export EDITOR='vim'
 # Example aliases
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='fd --type file --hidden --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+alias f="fzf --bind 'f1:execute(bat {}),f2:execute(bat {})+abort' --preview 'bat --color=always --style=header,grid --line-range :300 {}'"

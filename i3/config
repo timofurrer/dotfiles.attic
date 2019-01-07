@@ -206,7 +206,7 @@ bindsym --release Print exec --no-startup-id "scrot -d -e 'mv $f ~/images &amp; 
 
 # bind for lockscreen
 bindsym $mod+Shift+x exec "i3lock --beep -i ~/.config/old.i3/lock/windows_blue_screen.png -t -p win"
-exec --no-startup-id xautolock -time 15 -locker "i3lock --beep -i ~/.config/old.i3/lock/windows_blue_screen.png -t -    p win" &
+exec --no-startup-id xautolock -time 15 -locker "i3lock --beep -i ~/.config/old.i3/lock/windows_blue_screen.png -t -p win" &
 
 # start network manager applet
 exec --no-startup-id nm-applet
@@ -219,6 +219,8 @@ bindsym $mod+Shift+minus move scratchpad
 
 # Show the first scratchpad window
 bindsym $mod+minus scratchpad show
+
+exec --no-startup-id xset r rate 200 20
 
 # Colors
 #client.focused #4F99D3 #4F99D3 #151718 #9FCA56

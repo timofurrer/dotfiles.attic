@@ -1,3 +1,9 @@
 [submodule "vim"]
 	path = vim
 	url = git@github.com:timofurrer/.vim.git
+[submodule "fzf"]
+	path = fzf
+	url = https://github.com/junegunn/fzf
+[submodule "fd"]
+	path = fd
+	url = https://github.com/sharkdp/fd

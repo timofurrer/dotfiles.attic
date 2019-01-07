@@ -1,6 +1,6 @@
 # timofurrer/dotfiles
 
-**(1) Install required dependencies:**
+**Install required dependencies:**
 
 ```bash
 sudo apt install cmake cmake-data libcairo2-dev libxcb1-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-image0-dev libxcb-randr0-dev libxcb-util0-dev libxcb-xkb-dev pkg-config python-xcbgen xcb-proto libxcb-xrm-dev i3-wm libasound2-dev libpulse-dev libmpdclient-dev libiw-dev libcurl4-openssl-dev libxcb-cursor-dev
@@ -16,7 +16,7 @@ sudo apt install rofi ranger
 ```
 
 
-**(2) Build and install polybar:**
+**Build and install polybar:**
 
 ```bash
 git clone --recursive https://github.com/jaagr/polybar polybar.bin
@@ -24,7 +24,7 @@ cd polybar.bin
 ./build.sh
 ```
 
-**(3) Install i3-gaps:**
+**Install i3-gaps:**
 
 ```bash
 git clone https://www.github.com/Airblader/i3 i3-gaps
@@ -42,7 +42,7 @@ make
 sudo make install
 ```
 
-**(4) Install zsh:**
+**Install zsh:**
 
 ```bash
 sudo apt install zsh
@@ -58,7 +58,14 @@ git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/theme
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 ```
 
-**(5) Link config files:**
+**Install fzf:**
+
+```bash
+~/.fzf/install
+```
+
+
+**Link config files:**
 
 ```bash
 ln -s ~/dotfiles/i3 ~/.config/i3
